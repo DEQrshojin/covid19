@@ -3,6 +3,7 @@
 \title{Covid19 Analysis: New Cases vs. Total Confirmed}
 \description{A function that returns a data frame of of the top US states or world countries with confirmed Covid19 cases. Includes new daily cases and total confirmed cases to date for each region named. The number of new daily cases is the actually a rolling average of the previous n days. To be used in conjunction with graph_covid()}
 \usage{covid19(area, nDay, topN, addA)}
+%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{area}{Specify c('US states', 'Countries')} for analysis of US states or world countires.}
   \item{nday}{Number of days in rolling mean (e.g., 5-day rolling mean); default is 7 days}
@@ -11,7 +12,9 @@
 \value{A data frame of the top countries or US states plus any additional states or countries for analysis or graphing.}
 \references{Johns Hopkins University, Center for Systems Science and Engineering (CSSE), https://coronavirus.jhu.edu/}
 \author{Ryan Shojinaga}
-\seealso{graph_covid()}
+\seealso{graph_covid}
 \examples{data <- covid19(area = 'US States', nday = 7, topN = 10, addA = c('Oregon', 'Korea, South'))}
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory.
+\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
+\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

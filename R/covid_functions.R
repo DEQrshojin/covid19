@@ -101,7 +101,7 @@ graph_covid <- function(df = NULL, strD = NULL, dir = NULL) {
 
   }
 
-  return(cat('Your graphs are finished.'))
+  return(cat('Your graphs are finished\n'))
 
 }
 

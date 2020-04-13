@@ -1,6 +1,10 @@
 {
-    "path" : "C:/Users/rshojin/Desktop/rms/covid19/R/covid19/R",
+    "path" : "C:/Users/rshojin/Desktop/rms/covid19/R/covid19/man",
     "sortOrder" : [
+        {
+            "ascending" : false,
+            "columnIndex" : 4
+        },
         {
             "ascending" : true,
             "columnIndex" : 2

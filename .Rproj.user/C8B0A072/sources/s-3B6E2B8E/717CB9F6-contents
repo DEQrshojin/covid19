@@ -5,7 +5,7 @@
 \usage{add_areas(addA, df)}
 \arguments{
   \item{addA}{A vector of US states or world countries}
-  \item{df}{A data frame of the Covid19 data (produced within the covid19 function)}
+  \item{addA}{A data frame of the Covid19 data (produced within the covid19 function)}
 }
 \value{A data frame of additional areas with confirmed covid19 cases by day}
 \author{Ryan Shojinaga, Oregon DEQ}
