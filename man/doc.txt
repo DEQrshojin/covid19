@@ -1,0 +1,43 @@
+\name{graph_covid}
+\alias{graph_covid}
+\title{Graph Daily vs. Total Covid19 cases for movie frames}
+\description{Takes a data frame of countries or US states and creates movie frames of daily new cases versus total confirmed cases for each country or state. These frames can be used to create a movie in a movie editing softward application.}
+\usage{graph_covid(df, strD, dir)}
+\arguments{
+  \item{df}{A data frame of countries and/or states with total confirmed and new daily Covid19 cases by date}
+  \item{strD}{A date to start the movie frames from (e.g., '2020-03-01), if different from the JHU data (2020-01-22).}
+  \item{dir}{A directory into which the movie frames (.png) will be saved}
+}
+\value{
+A series of movie frames (files; .png) of daily new vs total confirmed
+}
+\references{Johns Hopkins University, Center for Systems Science and Engineering (CSSE), https://coronavirus.jhu.edu/}
+\author{Ryan Shojinaga}
+\seealso{covid19()}
+\examples{
+
+data <- covid19(area = 'US States', nday = 7, topN = 10, addA = c('Oregon', 'Korea, South'))
+
+graph_covid(df = data, strD = '2020-02-29', dir = 'C:/Users/baduser/Desktop/covid19_freakout')
+
+}
+\keyword{ ~kwd1 }
+\keyword{ ~kwd2 }
+
+\name{covid19}
+\alias{covid19}
+\title{Covid19 Analysis: New Cases vs. Total Confirmed}
+\description{A function that returns a data frame of of the top US states or world countries with confirmed Covid19 cases. Includes new daily cases and total confirmed cases to date for each region named. The number of new daily cases is the actually a rolling average of the previous n days. To be used in conjunction with graph_covid()}
+\usage{covid19(area, nDay, topN, addA)}
+\arguments{
+  \item{area}{Specify c('US states', 'Countries')} for analysis of US states or world countires.}
+  \item{nday}{Number of days in rolling mean (e.g., 5-day rolling mean); default is 7 days}
+  \item{topN}{Number of US states or countries with highest total confirmed Covid19 cases to be included in the analysis; default is 10 states or countries}
+  \item{addA}{Countries of US states to be include in addition to the topN US states or world countries}}
+\value{A data frame of the top countries or US states plus any additional states or countries for analysis or graphing.}
+\references{Johns Hopkins University, Center for Systems Science and Engineering (CSSE), https://coronavirus.jhu.edu/}
+\author{Ryan Shojinaga}
+\seealso{graph_covid()}
+\examples{data <- covid19(area = 'US States', nday = 7, topN = 10, addA = c('Oregon', 'Korea, South'))}
+\keyword{ ~kwd1 }
+\keyword{ ~kwd2 }
